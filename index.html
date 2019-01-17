@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <!-- CSS stylesheet-->
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.js"></script>
+    <script src="angularApp.js"></script>
+
+    <title>SPA Website - test </title>
+</head>
+
+<style>
+body, html{
+    height: 100%;
+}
+.h-90{
+    height: 90%;
+}
+.h-10{
+    height: 10%;
+}
+</style>
+
+<body>
+        <div class="container-fluid h-100" style="border:1px solid green;">
+
+            <div class="row h-10">
+                <div class="col-12">
+                    Header content
+                </div>
+            </div>
+            <div class="row h-90">
+                <div class="col-3 sidebar" style="border:1px solid blue;">
+                    Sidebar Content
+                </div>
+                <div class="col-9 col-offset-3 content" style="border:1px solid red;">
+                    Main Content
+
+                    <div class="row">
+                        <div class="col-3" style="border: 1px solid green;">
+                            Main-subcontent-1
+                        </div>
+
+                        <div class="col-9" style="border: 1px solid black;">
+                            Main-subcontent-2 <br>
+                            1 2 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

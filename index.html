@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -36,21 +37,18 @@
 <body>
     <div class="container-fluid h-100">
         <nav class="navbar navbar-default navbar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
-
-
-                
-            <!-- --------------------------------   LOGO  -------------------------------------------- -->
+            <!-- -------------  LOGO  -------------- -->
             <div id="logo-box">
                 <a href="#">
                     <img src="img/logo2.png">
                 </a>
-                
+
                 <span id="logo-text">
                     <b>S</b>mart<b>H</b>ome
                 </span>
             </div>
-            <!-- --------------------------------  /LOGO  -------------------------------------------- -->
-            
+            <!-- -------------  /LOGO  -------------- -->
+
 
             <!-- ------------ NOTIFICATION, SETTINGS, SEARCH - THINGS THAT COLLAPSE ------------------ -->
 
@@ -83,79 +81,46 @@
                 <!-- ------------ /Search ------------ -->
             </ul>
 
-            <style>
-
-            </style>
-            <ul id="account_ul" class="navbar-nav ml-auto" style="padding:10px 20px;">
-
-                <li class="nav-item top_navbar_item text-center">
-                    <span class="account_item_in_navbar">
-                        <span id="helloAccountName" class="d-none d-lg-inline" style="padding-right: 10px;">
-                            Hello, <span style="font-weight: 600"> Krystian Latkowski</span>
+            <!-- ------------ Hello, Username ------------ -->
+            <ul id="account_ul" class="navbar-nav ml-auto">
+                <li class="nav-item text-center">
+                    <a class="nav-link" href="#">
+                        <span class="d-none d-lg-inline" style="padding-right: 10px;">
+                            Hello, <span id="userName" style="font-weight:600;"> Krystian Latkowski</span>
                         </span>
-                        <img id="accountPic" src="img/face.png" width="45px;">
-                    </span>
+                        <img id="accountPic" src="img/face.png">
+                        </span>
+                    </a>
                 </li>
-                
-
             </ul>
-
-
-
+            <!-- ------------ /Hello, Username ------------ -->
 
         </nav>
-        <!-- -------------------------- /HEADER ------------------------- -->
 
         <div class="row h-90">
 
-            <style>
-                #sidebar {
-                    font-family: 'Muli', sans-serif;
-                    color: #9f9f9f;
-                    font-size: 18px;
-                    letter-spacing: 1.3px;
-                    font-weight: 600;
-                }
-
-                #sidebar img {
-                    width: 60px;
-                    padding-top: 5px;
-                }
-
-                #sidebar .row {
-                    margin-top: 15px;
-                }
-
-                .sidebar_title {
-                    padding: 15px 0px;
-                }
-
-                .sidebar_item:hover {
-                    background-color: #1b1920;
-                }
-            </style>
             <!-- -------------------------- SIDEBAR ------------------------- -->
-            <div id="sidebar" class="col-2" style="background-color: #363144; min-width: 150px;">
+            <div id="sidebar" class="col-2">
 
                 <div class="row text-center sidebar_item">
-                    <div class="col-12" style="height: auto;">
-                        <img src="img/Icons/dashboard.png" style="width:60px">
+                    <div class="col-12">
+                        <img src="img/Icons/dashboard.png">
                     </div>
                     <div class="col-12 sidebar_title d-none d-md-block">
                         DASHBOARD
                     </div>
                 </div>
                 <div class="row text-center sidebar_item">
-                    <div class="col-12 " style="height: auto;">
-                        <img src="img/Icons/your_smarthome.png" style="width:60px">
+                    <div class="col-12">
+                        <img src="img/Icons/your_smarthome.png">
                     </div>
                     <div class="col-12 sidebar_title d-none d-md-block">
                         YOUR SMARTHOME
                     </div>
                 </div>
                 <div class="row text-center sidebar_item">
-                    <div class="col-12 " style="height: auto;">
-                        <img src="img/Icons/blackboard.png" style="width:60px">
+                    <div class="col-12">
+                        <img src="img/Icons/blackboard.png"">
                     </div>
                     <div class="col-12 sidebar_title d-none d-md-block">
                         BLACKBOARD
@@ -163,8 +128,8 @@
                 </div>
 
                 <div class="row text-center sidebar_item">
-                    <div class="col-12" style="height: auto;">
-                        <img src="img/Icons/stats.png" style="width:60px">
+                    <div class="col-12">
+                        <img src="img/Icons/stats.png">
                     </div>
                     <div class="col-12 sidebar_title d-none d-md-block">
                         STATS

@@ -57,6 +57,7 @@ html {
 
 .top_navbar_item:hover {
     background-color: #0e87be;
+    border-radius: 20px;
 }
 
 .top_navbar_item:last-of-type {
@@ -64,13 +65,76 @@ html {
 }
 
 
-
-.top_navbar_icon {}
-
 .top_navbar_item span {
     font-weight: 600;
     font-size: 16px;
     color: #dddddd;
     padding-left: 10px;
+}
 
+
+/* Account in navbar  */
+#account_ul{
+    padding:10px 20px;
+}
+
+#account_ul img{
+    width: 45px;
+}
+
+#account_ul li,a{
+    font-weight: 600;
+    font-size: 16px;
+    color: #dddddd;
+    padding-left: 10px;
+}
+
+#userName{
+    color: white;
+}
+
+#account_ul li:hover #userName{
+    color:rgb(181, 219, 255);
+
+}
+
+#account_ul li:hover a{
+    color:rgb(152, 205, 255);
+}
+
+/* Sidebar */
+#sidebar {
+    min-width: 150px;
+    color: #9f9f9f;
+    background-color: #363144;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.3px;
+    font-weight: 600;
+
+}
+
+#sidebar img {
+    width: 60px;
+    padding-top: 5px;
+}
+
+#sidebar .row {
+    margin-top: 15px;
+}
+
+.sidebar_title {
+    padding: 15px 0px;
+}
+
+.sidebar_item:hover {
+    background-color: #1b1920;
+}
+
+.sidebar_item img {
+    width:60px;
+}
+
+.auto_height{
+    height: auto;
 }

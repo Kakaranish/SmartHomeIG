@@ -5,6 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -19,14 +23,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.js"></script>
-    <script src="angularApp.js"></script>
+    <!-- <script src="angularApp.js"></script> -->
 
     <title>SPA Website - test </title>
 </head>
 
 <style>
-body, html{
+    body, html{
     height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size:16px;
 }
 .h-90{
     height: 90%;
@@ -34,36 +40,293 @@ body, html{
 .h-10{
     height: 10%;
 }
+.border1black{
+    border:1px solid black;
+}
+
+.navbar-custom{
+    background-color: #078EE3; 
+    margin-left:-20px; 
+    margin-right: -20px; 
+
+}
+#logo-box{
+    padding: 5px 10px;
+
+    font-family: 'Archivo', sans-serif;
+    font-size:30px;
+
+}
+#logo-box b
+{
+    color:rgb(243, 243, 243);
+    
+}
+
+.navbar-header{
+    background:#e7e7e7;;
+  position:relative;
+}
+
+.navbar-header:before {
+    position: absolute;
+    height: 100%;
+    display: inline-block;
+    background: #e7e7e7;;
+    top: 0;
+    left: -9999px;
+    right: 100%;
+}
+.navbar-default{
+    background:blue;
+}
 </style>
 
+<script>
+
+    var navbar_visible;
+
+    function toggleLogoVisibility(visibility){
+            
+            if (visibility){
+              $("#logo-text").hide();
+
+              $("#helloAccountName").hide();
+              $("#accountPic").hide();
+              $("#yourAccount").show();
+              $(".top_menu_icon").hide();
+              $(".top_menu_text").show();
+              $("#account_ul li").unbind('mouseenter mouseleave');
+              
+            }
+            else{
+                $("#logo-text").show();
+                
+                $("#helloAccountName").show();
+                $("#accountPic").show();
+                $("#yourAccount").hide();
+                $(".top_menu_icon").show();
+                $(".top_menu_text").hide();
+
+            }
+          }
+
+          
+          
+    $(document).ready(function() {
+
+        navbar_visible = $("#toggler").is(":visible");
+            toggleLogoVisibility(navbar_visible)
+        
+        
+
+        
+        
+        
+        $(window).resize(function(){
+            navbar_visible = $("#toggler").is(":visible");
+            toggleLogoVisibility(navbar_visible);
+        });
+        
+
+});
+
+
+
+</script>
+
 <body>
-        <div class="container-fluid h-100" style="border:1px solid green;">
+    <div class="container-fluid h-100">
+        <nav class="navbar  navbar-expand-md navbar-light navbar-custom" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
 
-            <div class="row h-10">
-                <div class="col-12">
-                    Header content
-                </div>
+
+            <!-- ------------- LOGO ------------- -->
+            <div class="navbar-left " id="logo-box" style="background-color: #078EE3; padding: 10px;">
+                <a href="#"><img src="img/logo2.png" style="width:60px;;"></a>
+
+                <span id="logo-text">
+                    <b>S</b>mart<b>H</b>ome
+                </span>
+
             </div>
-            <div class="row h-90">
-                <div class="col-3 sidebar" style="border:1px solid blue;">
-                    Sidebar Content
-                </div>
-                <div class="col-9 col-offset-3 content" style="border:1px solid red;">
-                    Main Content
 
-                    <div class="row">
-                        <div class="col-3" style="border: 1px solid green;">
-                            Main-subcontent-1
-                        </div>
+            <button id="toggler" class="navbar-toggler navbar-toggler-right ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <div class="col-9" style="border: 1px solid black;">
-                            Main-subcontent-2 <br>
-                            1 2 3
-                        </div>
+            <!-- ------------ NOTIFICATION, SETTINGS, SEARCH ------------- -->
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <style>
+                    .navbar_item {
+                        padding: 5px 5px;
+                        margin-left: 5px;
+                    }
+
+                    .navbar_item img {
+                        width: 35px;
+                    }
+
+                    .navbar_item:hover {
+                        background-color: #0e87be;
+                    }
+
+                    .navbar_item:last-of-type {
+                        margin-right: 0px;
+                    }
+
+                    .top_menu_text {}
+
+                    .top_menu_icon {}
+                </style>
+                <ul id="topMenu" class="navbar-nav mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
+
+                    <li class="nav-item navbar_item text-center">
+                        <a class="nav-link" href="#">
+                            <img src="img/Icons/notification.png" class="top_menu_icon" style="width:35px;">
+                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Notifications</span>
+                        </a>
+
+
+                    </li>
+                    <li class="nav-item navbar_item text-center">
+                        <a class="nav-link" href="#">
+                            <img src="img/Icons/settings.png" class="top_menu_icon" style="width:35px;">
+                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item navbar_item text-center">
+                        <a class="nav-link" href="#">
+                            <img src="img/Icons/search.png" class="top_menu_icon" style="width:35px;">
+                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Search</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <style>
+
+                </style>
+                <ul id="account_ul" class="navbar-nav ml-auto" style="padding:10px 20px;">
+                    <li class="nav-item navbar_item text-center">
+
+                        <span class="account_item_in_navbar">
+
+                            <span id="helloAccountName" class="text-white" style="padding-right: 10px;">Hello,
+                                <span style="font-weight: 600"> Krystian Latkowski</span></span>
+                            <img id="accountPic" src="img/face.png" width="45px;">
+
+                            <span id="yourAccount" class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Your
+                                account</span>
+
+                        </span>
+
+                    </li>
+                </ul>
+
+
+
+        </nav>
+        <!-- -------------------------- /HEADER ------------------------- -->
+
+        <div class="row h-90">
+
+            <style>
+                #sidebar {
+                    font-family: 'Muli', sans-serif;
+                    color: #9f9f9f;
+                    font-size: 18px;
+                    letter-spacing: 1.3px;
+                    font-weight: 600;
+                }
+
+                #sidebar img {
+                    width: 60px;
+                    padding-top: 5px;
+                }
+
+                #sidebar .row {
+                    margin-top: 15px;
+                }
+
+                .sidebar_title {
+                    padding: 15px 0px;
+                }
+
+                .sidebar_item:hover {
+                    background-color: #1b1920;
+                }
+            </style>
+            <!-- -------------------------- SIDEBAR ------------------------- -->
+            <div id="sidebar" class="col-2" style="background-color: #363144; min-width: 150px;">
+
+                <div class="row text-center sidebar_item">
+                    <div class="col-12" style="height: auto;">
+                        <img src="img/Icons/dashboard.png" style="width:60px">
+                    </div>
+                    <div class="col-12 sidebar_title d-none d-md-block">
+                        DASHBOARD
                     </div>
                 </div>
+                <div class="row text-center sidebar_item">
+                    <div class="col-12 " style="height: auto;">
+                        <img src="img/Icons/your_smarthome.png" style="width:60px">
+                    </div>
+                    <div class="col-12 sidebar_title d-none d-md-block">
+                        YOUR SMARTHOME
+                    </div>
+                </div>
+                <div class="row text-center sidebar_item">
+                    <div class="col-12 " style="height: auto;">
+                        <img src="img/Icons/blackboard.png" style="width:60px">
+                    </div>
+                    <div class="col-12 sidebar_title d-none d-md-block">
+                        BLACKBOARD
+                    </div>
+                </div>
+
+                <div class="row text-center sidebar_item">
+                    <div class="col-12" style="height: auto;">
+                        <img src="img/Icons/stats.png" style="width:60px">
+                    </div>
+                    <div class="col-12 sidebar_title d-none d-md-block">
+                        STATS
+                    </div>
+                </div>
+
+            </div>
+            <!-- -------------------------- /SIDEBAR ------------------------- -->
+
+            <style>
+                @media (min-width: 768px) {
+                    .main {
+                        padding-right: 40px;
+                        padding-left: 220px;
+                        /* 180 + 40 */
+                    }
+                }
+            </style>
+            <div class="col-10 content main">
+                <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
+                Main Content
+
+                <div class="row" style="min-width: 100px;">
+                    <div class="col-md-3" style="border: 1px solid green;">
+                        Main-subcontent-1
+                    </div>
+
+                    <div class="col-md-9" style="border: 1px solid black;">
+                        Main-subcontent-2 <br>
+                        1 2 3
+                    </div>
+                </div>
+
+                <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
             </div>
         </div>
+    </div>
+
+
 </body>
 
 </html>

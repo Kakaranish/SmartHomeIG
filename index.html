@@ -43,7 +43,7 @@
                     <img src="img/logo2.png">
                 </a>
 
-                <span id="logo-text">
+                <span id="logo-text" class="d-none d-sm-inline">
                     <b>S</b>mart<b>H</b>ome
                 </span>
             </div>
@@ -97,10 +97,39 @@
 
         </nav>
 
-        <div class="row h-90">
 
-            <!-- -------------------------- SIDEBAR ------------------------- -->
-            <div id="sidebar" class="col-2">
+        <!-- <div id="sidebar_xs" class="row d-block d-sm-none border1black">
+            <div class="col-3 border1black">
+                ss
+            </div>
+            <div class="col-3 border1black">
+                ss
+            </div>
+        </div> -->
+
+        <!-- --------------------------- SIDEBAR XS -------------------------- -->
+        <div class="row">
+            <div id="sidebar_xs" class="col-12 border1black d-block d-sm-none">
+                <div class="row text-center">
+                    <div class="col-3 sidebar_xs_item">
+                        <img src="img/Icons/dashboard.png">
+                    </div>
+                    <div class="col-3 sidebar_xs_item">
+                        <img src="img/Icons/your_smarthome.png">
+                    </div>
+                    <div class="col-3 sidebar_xs_item">
+                        <img src="img/Icons/blackboard.png"">
+                    </div>
+                    <div class="col-3 sidebar_xs_item">
+                        <img src="img/Icons/stats.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------- /SIDEBAR XS -------------------------- -->
+        <!-- -------------------------- SIDEBAR > XS ------------------------- -->
+        <div class="row h-90">
+            <div id="sidebar" class="col-2 d-none d-sm-block">
 
                 <div class="row text-center sidebar_item">
                     <div class="col-12">
@@ -122,7 +151,8 @@
                     <div class="col-12">
                         <img src="img/Icons/blackboard.png"">
                     </div>
-                    <div class="col-12 sidebar_title d-none d-md-block">
+                    <div class="
+                            col-12 sidebar_title d-none d-md-block">
                         BLACKBOARD
                     </div>
                 </div>
@@ -137,7 +167,7 @@
                 </div>
 
             </div>
-            <!-- -------------------------- /SIDEBAR ------------------------- -->
+            <!-- -------------------------- /SIDEBAR > XS ------------------------ -->
 
             <style>
                 @media (min-width: 768px) {
@@ -148,23 +178,23 @@
                     }
                 }
             </style>
-            <div class="col-10 content main">
-                <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
-                Main Content
+            <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
+            <div class="col-xs-12 col-sm-10">
 
-                <div class="row" style="min-width: 100px;">
-                    <div class="col-md-3" style="border: 1px solid green;">
-                        Main-subcontent-1
+                <div class="row">
+
+                    <div class="col-2 border1black">
+                        xD
+                    </div>
+                    <div class="col-10 border1black">
+                        bkbkbk
                     </div>
 
-                    <div class="col-md-9" style="border: 1px solid black;">
-                        Main-subcontent-2 <br>
-                        1 2 3
-                    </div>
                 </div>
-
-                <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
             </div>
+            <!-- -------------------------- /SWITCHABLE CONTENT ------------------------- -->
+
+
         </div>
     </div>
 

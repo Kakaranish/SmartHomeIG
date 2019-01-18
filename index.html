@@ -35,78 +35,71 @@
 
 <body>
     <div class="container-fluid h-100">
-        <nav class="navbar  navbar-expand-md navbar-light nabar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
+        <nav class="navbar navbar-default navbar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
 
 
+                
             <!-- --------------------------------   LOGO  -------------------------------------------- -->
-            <div id="logo-box" class="navbar-left">
+            <div id="logo-box">
                 <a href="#">
                     <img src="img/logo2.png">
                 </a>
-
+                
                 <span id="logo-text">
                     <b>S</b>mart<b>H</b>ome
                 </span>
             </div>
             <!-- --------------------------------  /LOGO  -------------------------------------------- -->
-
-            <!-- Toggler button  -->
-            <button id="toggler" class="navbar-toggler navbar-toggler-right ml-auto" type="button" data-toggle="collapse"
-                data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- /Toggler button  -->
+            
 
             <!-- ------------ NOTIFICATION, SETTINGS, SEARCH - THINGS THAT COLLAPSE ------------------ -->
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul id="topMenu" class="navbar-nav mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
 
-                    <!-- -------- Notifications -------- -->
-                    <li class="nav-item top_navbar_item text-center">
-                        <a class="nav-link" href="#">
-                            <img src="img/Icons/notification.png" class="top_navbar_icon" style="width:35px;">
-                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Notifications</span>
-                        </a>
-                    </li>
-                    <!-- ------- /Notifications -------- -->
-                    <!-- ---------- Settings ----------- -->
-                    <li class="nav-item top_navbar_item text-center">
-                        <a class="nav-link" href="#">
-                            <img src="img/Icons/settings.png" class="top_navbar_icon" style="width:35px;">
-                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Settings</span>
-                        </a>
-                    </li>
-                    <!-- ---------- /Settings ----------- -->
-                    <!-- ------------ Search ------------ -->
-                    <li class="nav-item top_navbar_item text-center">
-                        <a class="nav-link" href="#">
-                            <img src="img/Icons/search.png" class="top_navbar_icon" style="width:35px;">
-                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Search</span>
-                        </a>
-                    </li>
-                    <!-- ------------ /Search ------------ -->
-                </ul>
+            <ul id="topMenu" class="navbar-nav navbar-expand mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
 
-                <style>
+                <!-- -------- Notifications -------- -->
+                <li class="nav-item top_navbar_item text-center">
+                    <a class="nav-link" href="#">
+                        <img src="img/Icons/notification.png" class="top_navbar_icon" style="width:35px;">
+                        <span class="d-none d-md-inline">Notifications</span>
+                    </a>
+                </li>
+                <!-- ------- /Notifications -------- -->
+                <!-- ---------- Settings ----------- -->
+                <li class="nav-item top_navbar_item text-center">
+                    <a class="nav-link" href="#">
+                        <img src="img/Icons/settings.png" class="top_navbar_icon" style="width:35px;">
+                        <span class="d-none d-md-inline">Settings</span>
+                    </a>
+                </li>
+                <!-- ---------- /Settings ----------- -->
+                <!-- ------------ Search ------------ -->
+                <li class="nav-item top_navbar_item text-center">
+                    <a class="nav-link" href="#">
+                        <img src="img/Icons/search.png" class="top_navbar_icon" style="width:35px;">
+                        <span class="d-none d-md-inline">Search</span>
+                    </a>
+                </li>
+                <!-- ------------ /Search ------------ -->
+            </ul>
 
-                </style>
-                <ul id="account_ul" class="navbar-nav ml-auto" style="padding:10px 20px;">
-                    <li class="nav-item top_navbar_item text-center">
+            <style>
 
-                        <span class="account_item_in_navbar">
+            </style>
+            <ul id="account_ul" class="navbar-nav ml-auto" style="padding:10px 20px;">
 
-                            <span id="helloAccountName" class="text-white" style="padding-right: 10px;">Hello,
-                                <span style="font-weight: 600"> Krystian Latkowski</span></span>
-                            <img id="accountPic" src="img/face.png" width="45px;">
-
-                            <span id="yourAccount" class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Your
-                                account</span>
-
+                <li class="nav-item top_navbar_item text-center">
+                    <span class="account_item_in_navbar">
+                        <span id="helloAccountName" class="d-none d-lg-inline" style="padding-right: 10px;">
+                            Hello, <span style="font-weight: 600"> Krystian Latkowski</span>
                         </span>
+                        <img id="accountPic" src="img/face.png" width="45px;">
+                    </span>
+                </li>
+                
 
-                    </li>
-                </ul>
+            </ul>
+
 
 
 
@@ -209,7 +202,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 

@@ -3,21 +3,21 @@ function toggleLogoVisibility(visibility) {
     if (visibility) {
         $("#logo-text").hide();
 
-        $("#helloAccountName").hide();
-        $("#accountPic").hide();
-        $("#yourAccount").show();
-        $(".top_menu_icon").hide();
-        $(".top_menu_text").show();
-        $("#account_ul li").unbind('mouseenter mouseleave');
+        // $("#helloAccountName").hide();
+        // $("#accountPic").hide();
+        // $("#yourAccount").show();
+        // $(".top_menu_icon").hide();
+        // $(".top_menu_text").show();
+
 
     } else {
         $("#logo-text").show();
 
-        $("#helloAccountName").show();
-        $("#accountPic").show();
-        $("#yourAccount").hide();
-        $(".top_menu_icon").show();
-        $(".top_menu_text").hide();
+        // $("#helloAccountName").show();
+        // $("#accountPic").show();
+        // $("#yourAccount").hide();
+        // $(".top_menu_icon").show();
+        // $(".top_menu_text").hide();
 
     }
 }

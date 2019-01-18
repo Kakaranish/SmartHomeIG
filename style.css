@@ -3,6 +3,7 @@ html {
     height: 100%;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 /* Helper classes */
@@ -157,4 +158,18 @@ a {
 
 .sidebar_xs_item:hover {
     background-color: #1b1920;
+}
+
+/* Switchable content */
+#switchable_content {
+    font-family: 'Muli', sans-serif;
+}
+
+.vertical_align {
+    display: flex;
+    align-items: center;
+}
+
+.box_item {
+    padding-bottom: 10px;
 }

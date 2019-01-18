@@ -26,189 +26,73 @@
     <!-- <script src="angularApp.js"></script> -->
 
     <title>SPA Website - test </title>
+
+    <script src="index-script.js">
+        //Global variables
+        var navbar_visible;
+    </script>
 </head>
-
-<style>
-    body, html{
-    height: 100%;
-    font-family: 'Lato', sans-serif;
-    font-size:16px;
-}
-.h-90{
-    height: 90%;
-}
-.h-10{
-    height: 10%;
-}
-.border1black{
-    border:1px solid black;
-}
-
-.navbar-custom{
-    background-color: #078EE3; 
-    margin-left:-20px; 
-    margin-right: -20px; 
-
-}
-#logo-box{
-    padding: 5px 10px;
-
-    font-family: 'Archivo', sans-serif;
-    font-size:30px;
-
-}
-#logo-box b
-{
-    color:rgb(243, 243, 243);
-    
-}
-
-.navbar-header{
-    background:#e7e7e7;;
-  position:relative;
-}
-
-.navbar-header:before {
-    position: absolute;
-    height: 100%;
-    display: inline-block;
-    background: #e7e7e7;;
-    top: 0;
-    left: -9999px;
-    right: 100%;
-}
-.navbar-default{
-    background:blue;
-}
-</style>
-
-<script>
-
-    var navbar_visible;
-
-    function toggleLogoVisibility(visibility){
-            
-            if (visibility){
-              $("#logo-text").hide();
-
-              $("#helloAccountName").hide();
-              $("#accountPic").hide();
-              $("#yourAccount").show();
-              $(".top_menu_icon").hide();
-              $(".top_menu_text").show();
-              $("#account_ul li").unbind('mouseenter mouseleave');
-              
-            }
-            else{
-                $("#logo-text").show();
-                
-                $("#helloAccountName").show();
-                $("#accountPic").show();
-                $("#yourAccount").hide();
-                $(".top_menu_icon").show();
-                $(".top_menu_text").hide();
-
-            }
-          }
-
-          
-          
-    $(document).ready(function() {
-
-        navbar_visible = $("#toggler").is(":visible");
-            toggleLogoVisibility(navbar_visible)
-        
-        
-
-        
-        
-        
-        $(window).resize(function(){
-            navbar_visible = $("#toggler").is(":visible");
-            toggleLogoVisibility(navbar_visible);
-        });
-        
-
-});
-
-
-
-</script>
 
 <body>
     <div class="container-fluid h-100">
-        <nav class="navbar  navbar-expand-md navbar-light navbar-custom" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
+        <nav class="navbar  navbar-expand-md navbar-light nabar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
 
 
-            <!-- ------------- LOGO ------------- -->
-            <div class="navbar-left " id="logo-box" style="background-color: #078EE3; padding: 10px;">
-                <a href="#"><img src="img/logo2.png" style="width:60px;;"></a>
+            <!-- --------------------------------   LOGO  -------------------------------------------- -->
+            <div id="logo-box" class="navbar-left">
+                <a href="#">
+                    <img src="img/logo2.png">
+                </a>
 
                 <span id="logo-text">
                     <b>S</b>mart<b>H</b>ome
                 </span>
-
             </div>
+            <!-- --------------------------------  /LOGO  -------------------------------------------- -->
 
+            <!-- Toggler button  -->
             <button id="toggler" class="navbar-toggler navbar-toggler-right ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- /Toggler button  -->
 
-            <!-- ------------ NOTIFICATION, SETTINGS, SEARCH ------------- -->
+            <!-- ------------ NOTIFICATION, SETTINGS, SEARCH - THINGS THAT COLLAPSE ------------------ -->
 
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <style>
-                    .navbar_item {
-                        padding: 5px 5px;
-                        margin-left: 5px;
-                    }
-
-                    .navbar_item img {
-                        width: 35px;
-                    }
-
-                    .navbar_item:hover {
-                        background-color: #0e87be;
-                    }
-
-                    .navbar_item:last-of-type {
-                        margin-right: 0px;
-                    }
-
-                    .top_menu_text {}
-
-                    .top_menu_icon {}
-                </style>
                 <ul id="topMenu" class="navbar-nav mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
 
-                    <li class="nav-item navbar_item text-center">
+                    <!-- -------- Notifications -------- -->
+                    <li class="nav-item top_navbar_item text-center">
                         <a class="nav-link" href="#">
-                            <img src="img/Icons/notification.png" class="top_menu_icon" style="width:35px;">
-                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Notifications</span>
-                        </a>
-
-
-                    </li>
-                    <li class="nav-item navbar_item text-center">
-                        <a class="nav-link" href="#">
-                            <img src="img/Icons/settings.png" class="top_menu_icon" style="width:35px;">
-                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Settings</span>
+                            <img src="img/Icons/notification.png" class="top_navbar_icon" style="width:35px;">
+                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Notifications</span>
                         </a>
                     </li>
-                    <li class="nav-item navbar_item text-center">
+                    <!-- ------- /Notifications -------- -->
+                    <!-- ---------- Settings ----------- -->
+                    <li class="nav-item top_navbar_item text-center">
                         <a class="nav-link" href="#">
-                            <img src="img/Icons/search.png" class="top_menu_icon" style="width:35px;">
-                            <span class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Search</span>
+                            <img src="img/Icons/settings.png" class="top_navbar_icon" style="width:35px;">
+                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Settings</span>
                         </a>
                     </li>
+                    <!-- ---------- /Settings ----------- -->
+                    <!-- ------------ Search ------------ -->
+                    <li class="nav-item top_navbar_item text-center">
+                        <a class="nav-link" href="#">
+                            <img src="img/Icons/search.png" class="top_navbar_icon" style="width:35px;">
+                            <span class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Search</span>
+                        </a>
+                    </li>
+                    <!-- ------------ /Search ------------ -->
                 </ul>
 
                 <style>
 
                 </style>
                 <ul id="account_ul" class="navbar-nav ml-auto" style="padding:10px 20px;">
-                    <li class="nav-item navbar_item text-center">
+                    <li class="nav-item top_navbar_item text-center">
 
                         <span class="account_item_in_navbar">
 
@@ -216,7 +100,7 @@
                                 <span style="font-weight: 600"> Krystian Latkowski</span></span>
                             <img id="accountPic" src="img/face.png" width="45px;">
 
-                            <span id="yourAccount" class="top_menu_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Your
+                            <span id="yourAccount" class="top_navbar_text" style="font-weight:600; font-size:16px; color: #dddddd; padding-left:10px;">Your
                                 account</span>
 
                         </span>

@@ -21,7 +21,15 @@ function toggleLogoVisibility(visibility) {
 
     }
 }
-
+function changeActive(){
+    var loc = window.location.href; // returns the full URL
+    loc = loc.substr(loc.lastIndexOf('/')+1);
+    
+    $("#sidebar > a > div").removeClass("active");
+    $('#sidebar > a[href*="#'+loc+'"] > div').addClass('active');
+    $('.sidebar_xs_item').removeClass('active');
+    $('.sidebar_xs_item[href*="#'+loc+'"]').addClass('active');
+}
 
 
 $(document).ready(function () {
@@ -32,5 +40,11 @@ $(document).ready(function () {
     $(window).resize(function () {
         navbar_visible = $("#toggler").is(":visible");
         toggleLogoVisibility(navbar_visible);
+    });
+
+    $(".sidebar_xs_item").on('click', function(){
+        var loc = window.location.href; // returns the full URL
+        loc = loc.substr(0,loc.lastIndexOf('/')-1);
+        window.location.replace(loc+$(this).attr('href'));
     });
 });

@@ -134,12 +134,17 @@ a .sidebar_item:hover {
     color: #9f9f9f;
     text-decoration: none;
 }
+
 a:hover{
     text-decoration: none;
 }
 
 .sidebar_item img {
     width: 60px;
+}
+
+.active{
+    background: #1b192078;
 }
 
 .auto_height {
@@ -164,6 +169,7 @@ a:hover{
 .sidebar_xs_item:hover {
     background-color: #1b1920;
     text-decoration: none;
+    cursor: pointer;
     
 }
 

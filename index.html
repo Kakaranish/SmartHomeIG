@@ -100,18 +100,34 @@
         <!-- --------------------------- SIDEBAR XS -------------------------- -->
         <div class="row">
             <div id="sidebar_xs" class="col-12 d-block d-sm-none">
+                <!-- <nav class="navbar navbar-default navbar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
+                    <ul id="topMenu" class="navbar-nav navbar-expand mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
+                            <div class="row text-center sidebar_item active" style="margin-top:0px;">
+
+                                    <div class="col-12">
+                                        <img src="img/Icons/dashboard.png">
+                                    </div>
+                                    <div class="col-12 sidebar_title d-none d-md-block">
+                                        DASHBOARD
+                                    </div>
+                                </div>
+                    </ul>
+                </nav> -->
                 <div class="row text-center">
-                    <div class="col-3 sidebar_xs_item">
+
+
+
+                    <div class="col-3 sidebar_xs_item" href="#dashboard">
                         <img src="img/Icons/dashboard.png">
                     </div>
-                    <div class="col-3 sidebar_xs_item">
-                        <img src="img/Icons/your_smarthome.png">
+
+                    <div class="col-3 sidebar_xs_item" href="#your_smarthome">
+                        <img src=" img/Icons/your_smarthome.png">
                     </div>
-                    <div class="col-3 sidebar_xs_item">
-                        <img src="img/Icons/blackboard.png"">
+                    <div class="col-3 sidebar_xs_item" href="#blackboard">
+                        <img src=" img/Icons/blackboard.png">
                     </div>
-                    <div class="
-                            col-3 sidebar_xs_item">
+                    <div class="col-3 sidebar_xs_item" href="#stats">
                         <img src="img/Icons/stats.png">
                     </div>
                 </div>
@@ -122,43 +138,48 @@
         <div class="row h-90">
             <div id="sidebar" class="col-2 d-none d-sm-block" ">
 
-                <a href="#dashboard">
-                <div class="row text-center sidebar_item" style="margin-top:0px;">
+                <a href=" #dashboard">
+                <div class="row text-center sidebar_item active" style="margin-top:0px;">
 
+                    <div class="col-12">
+                        <img src="img/Icons/dashboard.png">
+                    </div>
+                    <div class="col-12 sidebar_title d-none d-md-block">
+                        DASHBOARD
+                    </div>
+                </div>
+                </a>
+                <a href="#your_smarthome">
+
+                    <div class="row text-center sidebar_item">
                         <div class="col-12">
-                            <img src="img/Icons/dashboard.png">
+                            <img src="img/Icons/your_smarthome.png">
                         </div>
                         <div class="col-12 sidebar_title d-none d-md-block">
-                            DASHBOARD
+                            YOUR SMARTHOME
                         </div>
                     </div>
                 </a>
-                <div class="row text-center sidebar_item">
-                    <div class="col-12">
-                        <img src="img/Icons/your_smarthome.png">
+                <a href="#blackboard">
+                    <div class="row text-center sidebar_item">
+                        <div class="col-12">
+                            <img src="img/Icons/blackboard.png">
+                        </div>
+                        <div class="col-12 sidebar_title d-none d-md-block">
+                            BLACKBOARD
+                        </div>
                     </div>
-                    <div class="col-12 sidebar_title d-none d-md-block">
-                        YOUR SMARTHOME
+                </a>
+                <a href="#stats">
+                    <div class="row text-center sidebar_item">
+                        <div class="col-12">
+                            <img src="img/Icons/stats.png">
+                        </div>
+                        <div class="col-12 sidebar_title d-none d-md-block">
+                            STATS
+                        </div>
                     </div>
-                </div>
-                <div class="row text-center sidebar_item">
-                    <div class="col-12">
-                        <img src="img/Icons/blackboard.png">
-                    </div>
-                    <div class="col-12 sidebar_title d-none d-md-block">
-                        BLACKBOARD
-                    </div>
-                </div>
-
-                <div class="row text-center sidebar_item">
-                    <div class="col-12">
-                        <img src="img/Icons/stats.png">
-                    </div>
-                    <div class="col-12 sidebar_title d-none d-md-block">
-                        STATS
-                    </div>
-                </div>
-
+                </a>
             </div>
             <!-- -------------------------- /SIDEBAR > XS ------------------------ -->
 
@@ -180,14 +201,14 @@
                 .when('/dashboard', {
                     templateUrl: 'dashboard.html'
                 })
-                .when('/page2', {
-                    templateUrl: 'page2.html'
+                .when('/your_smarthome', {
+                    templateUrl: 'your_smarthome.html'
                 })
-                .when('/page3', {
-                    templateUrl: 'page3.html'
+                .when('/blackboard', {
+                    templateUrl: 'blackboard.html'
                 })
-                .when('/page4', {
-                    templateUrl: 'page4.html'
+                .when('/stats', {
+                    templateUrl: 'stats.html'
                 })
                 .otherwise({
                     redirectTo: '/dashboard'

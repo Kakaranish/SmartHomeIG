@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="container-fluid h-100">
+    <div class="container-fluid h-100" ng-app="mainApp">
         <nav class="navbar navbar-default navbar-full-width" style="padding: 0px 10px 0px 0px; background-color: #087BB0;">
             <!-- -------------  LOGO  -------------- -->
             <div id="logo-box">
@@ -120,16 +120,19 @@
         <!-- -------------------------- /SIDEBAR XS -------------------------- -->
         <!-- -------------------------- SIDEBAR > XS ------------------------- -->
         <div class="row h-90">
-            <div id="sidebar" class="col-2 d-none d-sm-block">
+            <div id="sidebar" class="col-2 d-none d-sm-block" ">
 
-                <div class="row text-center sidebar_item">
-                    <div class="col-12">
-                        <img src="img/Icons/dashboard.png">
+                <a href="#dashboard">
+                <div class="row text-center sidebar_item" style="margin-top:0px;">
+
+                        <div class="col-12">
+                            <img src="img/Icons/dashboard.png">
+                        </div>
+                        <div class="col-12 sidebar_title d-none d-md-block">
+                            DASHBOARD
+                        </div>
                     </div>
-                    <div class="col-12 sidebar_title d-none d-md-block">
-                        DASHBOARD
-                    </div>
-                </div>
+                </a>
                 <div class="row text-center sidebar_item">
                     <div class="col-12">
                         <img src="img/Icons/your_smarthome.png">
@@ -160,139 +163,7 @@
             <!-- -------------------------- /SIDEBAR > XS ------------------------ -->
 
             <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
-            <div id="switchable_content" class="col-xs-12 col-sm-10" style="display: table;">
-
-                <div class="row">
-                    <!-- ------------------------------------------- Outside --------------------------------------------------- -->
-                    <div class="col-sm-5 col-12" style="background-color: #e7e7e7; display: table-cell;">
-                        <div style="padding-top: 20px; padding-bottom: 10 px; font-weight: bold; font-size: 25px; margin-bottom: 9px;">
-                            Outside
-                        </div>
-
-                        <hr style="width: 100%; height: 1px; background-color: #bebebe; margin: 0px; " />
-
-                        <div class="row box_item" style="margin-top:9px;">
-                            <div class="col-8">
-                                <div style="font-size: 35px; margin-bottom: -5px;">
-                                    2&#176;C
-                                </div>
-                                <span style="color: #757575; font-weight: 700;">
-                                    Temperature
-                                </span>
-                            </div>
-                            <br>
-                            <div class="col-4 vertical_align">
-                                <img src="img/Dasboard/temperature.png" width="50px;">
-                            </div>
-                        </div>
-                        <!-- ------------------------- -->
-                        <div class="row box_item">
-                            <div class="col-8">
-                                <div style="font-size: 35px; margin-bottom: -5px;">
-                                    76%
-                                </div>
-                                <span style="color: #757575; font-weight: 700;">
-                                    Humidity
-                                </span>
-                            </div>
-                            <div class="col-4 vertical_align">
-                                <img src="img/Dasboard/humidity.png" width="50px">
-                            </div>
-                        </div>
-                        <!-- ------------------------- -->
-                        <div class="row box_item">
-                            <div class="col-8">
-                                <div style="font-size: 35px; margin-bottom: -5px;">
-                                    1013hPa
-                                </div>
-                                <span style="color: #757575; font-weight: 700;">
-                                    Pressure
-                                </span>
-
-                            </div>
-                            <div class="col-4 vertical_align">
-                                <img src="img/Dasboard/pressure.png" width="50px">
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- ------------------------------------------- /Outside --------------------------------------------------- -->
-
-                    <!-- ------------------------------------- Energy consumption ---------------------------------------------- -->
-                    <div class="col-sm-7 col-12" style="background-color: #f6f6f6; height: 100%;  display: table-cell; padding: 0;">
-                        <div style="padding: 20px">
-                            <h5 style="padding-bottom: 10 px; font-weight: bold; font-size: 25px;">
-                                Energy consumption
-                            </h5>
-                            <hr style="width: 100%; height: 1px; background-color: #bebebe; margin: 0px;" />
-                        </div>
-
-                        <div style="float:right; margin-right: 20px;">
-                            <div style="font-size: 35px; margin-bottom: -5px; text-align: right">
-                                1320
-                            </div>
-                            <div style="color: #757575; font-weight: 700; text-align: right">
-                                kWh
-                                </span>
-                            </div>
-
-                        </div>
-                        <div class="col-12" style="margin-top:100px; padding:0px;">
-                            <img src="img/Dasboard/chart.PNG" class="img-fluid">
-                        </div>
-                        <!-- ------------------------------------- /Energy consumption ---------------------------------------------- -->
-
-                    </div>
-                </div>
-                <div class="row">
-
-                    <!-- ------------------------------------- Temperatures ---------------------------------------------- -->
-                    <div class="col-sm-5 col-12" style="background-color: #fdfdfd; display: table-cell;">
-
-                        <h5 style="padding-top: 20px; padding-bottom:  px; font-weight: bold; font-size: 25px;">
-                            Temperatures
-                        </h5>
-
-                        <hr style="width: 100%; height: 1px; background-color: #bebebe; margin: 0px; " />
-
-                        <div class="row box_item" style="margin-top: 15px; padding-bottom: 20px;">
-
-                            <div class="col-4 vertical_align">
-                                <img src="img/Dasboard/thermometer.png" height="100px;">
-                            </div>
-
-                            <div class="col-8">
-                                <div style="font-size: 35px; margin-bottom: -10px;">
-                                    23&#176;C
-                                </div>
-                                <span style="color: #757575; font-weight: 600;">
-                                    Thermostat #1
-                                </span>
-
-                                <div style="font-size: 35px; margin-bottom: -10px; margin-top:10px;">
-                                    23&#176;C
-                                </div>
-                                <span style="color: #757575; font-weight: 600;">
-                                    Thermostat #1
-                                </span>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ------------------------------------- /Temperatures ---------------------------------------------- -->
-
-                    <div class="col-sm-7 col-12" style="background-color: rgb(240, 240, 240)">
-
-                        <div class="row" style="display:table; margin-top: 20px; margin-left: -20px;">
-
-                            <div class="col-5" style="margin-top:20px; margin-left: 10px; display: table-cell;">
-                                <img src="img/Dasboard/air_quality.PNG" height="210px;">
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
+            <div id="switchable_content" class="col-xs-12 col-sm-10" style="" ng-view>
             </div>
             <!-- -------------------------- /SWITCHABLE CONTENT ------------------------- -->
 
@@ -300,6 +171,32 @@
 
         </div>
     </div>
+
+    <script>
+        var mainAngular = angular.module('mainApp', ['ngRoute', 'ngAnimate']);
+
+        mainAngular.config(function ($routeProvider, $locationProvider) {
+            $routeProvider
+                .when('/dashboard', {
+                    templateUrl: 'dashboard.html'
+                })
+                .when('/page2', {
+                    templateUrl: 'page2.html'
+                })
+                .when('/page3', {
+                    templateUrl: 'page3.html'
+                })
+                .when('/page4', {
+                    templateUrl: 'page4.html'
+                })
+                .otherwise({
+                    redirectTo: '/dashboard'
+                });
+
+            $locationProvider.hashPrefix('');
+
+        });
+    </script>
 
 </body>
 

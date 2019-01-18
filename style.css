@@ -107,8 +107,8 @@ a {
 /* Sidebar */
 #sidebar {
 
-    color: #9f9f9f;
     background-color: #363144;
+    color: #9f9f9f;
     font-family: 'Muli', sans-serif;
     font-size: 18px;
     letter-spacing: 1.3px;
@@ -129,8 +129,13 @@ a {
     padding: 15px 0px;
 }
 
-.sidebar_item:hover {
+a .sidebar_item:hover {
     background-color: #1b1920;
+    color: #9f9f9f;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
 }
 
 .sidebar_item img {
@@ -158,6 +163,8 @@ a {
 
 .sidebar_xs_item:hover {
     background-color: #1b1920;
+    text-decoration: none;
+    
 }
 
 /* Switchable content */
@@ -165,11 +172,13 @@ a {
     font-family: 'Muli', sans-serif;
 }
 
-.vertical_align {
+.vertical_horizontal_align {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .box_item {
     padding-bottom: 10px;
 }
+

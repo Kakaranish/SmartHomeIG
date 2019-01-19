@@ -65,6 +65,11 @@ html {
     margin-right: 0px;
 }
 
+.top_navbar_item_active{
+    background: rgba(27, 25, 32, 0.109);
+    border-radius: 20px;
+}
+
 
 .top_navbar_item span {
     font-weight: 600;
@@ -146,6 +151,8 @@ a:hover{
 .active{
     background: #1b192078;
 }
+
+
 
 .auto_height {
     height: auto;

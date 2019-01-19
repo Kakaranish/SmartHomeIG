@@ -1,0 +1,67 @@
+<script>
+    changeActive();
+</script>
+
+<style>
+    .center {
+        text-align: center;
+    }
+
+    .title {
+        color: rgb(39, 39, 39);
+        font-weight: 700;
+        font-size: 23px;
+        padding: 10px 0px;
+    }
+
+    .border1gray {
+        border: 1px solid rgba(128, 128, 128, 0.664);
+        padding-top: 15px;
+    }
+</style>
+
+<div class="row" style="padding:20px;">
+    <a href="#settings/add_user" class="col-2 col-sm-1">
+        <img src="Settings/img/back-arrow.png" width="40px">
+    </a>
+    <div class="col-10 col-sm-11">
+        <div class="text-center" style="font-weight: bold; font-size: 25px;">
+            Add new user to your SmartHome
+        </div>
+    </div>
+</div>
+
+<form>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Another label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+
+    <div class="form-group">
+        <label for="example-date-input">Date</label>
+        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+    </div>
+
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            Mężczyzna
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            Kobieta
+        </label>
+    </div>
+
+    <a href="#settings/add_user2" class="btn btn-block btn-outline-info btn-fluid" style="margin-top:30px;">Upload photo</a>
+
+    <a href="#settings/give_privileges" class="btn btn-block btn-primary btn-fluid" style="margin-top:30px;">Next step</a>
+
+</form>

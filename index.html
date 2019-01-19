@@ -32,6 +32,7 @@
         //Global variables
         var navbar_visible;
     </script>
+    <script src="angular-app-routing.js"></script>
 </head>
 
 <body>
@@ -50,14 +51,14 @@
             <!-- -------------  /LOGO  -------------- -->
 
 
-            <!-- ------------ NOTIFICATION, SETTINGS, SEARCH - THINGS THAT COLLAPSE ------------------ -->
+            <!-- ------------ NOTIFICATIONS, SETTINGS, SEARCH - THINGS THAT COLLAPSE ------------------ -->
 
 
             <ul id="topMenu" class="navbar-nav navbar-expand mr-auto" style="padding:0px 0px;margin-left: 5px; padding-right: 0px;">
 
                 <!-- -------- Notifications -------- -->
                 <li class="nav-item top_navbar_item text-center">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#settings/xD">
                         <img src="img/Icons/notification.png" class="top_navbar_icon" style="width:35px;">
                         <span class="d-none d-md-inline">Notifications</span>
                     </a>
@@ -65,7 +66,7 @@
                 <!-- ------- /Notifications -------- -->
                 <!-- ---------- Settings ----------- -->
                 <li class="nav-item top_navbar_item text-center">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#settings">
                         <img src="img/Icons/settings.png" class="top_navbar_icon" style="width:35px;">
                         <span class="d-none d-md-inline">Settings</span>
                     </a>
@@ -184,7 +185,7 @@
             <!-- -------------------------- /SIDEBAR > XS ------------------------ -->
 
             <!-- -------------------------- SWITCHABLE CONTENT ------------------------- -->
-            <div id="switchable_content" class="col-xs-12 col-sm-10" style="" ng-view>
+            <div id="switchable_content" class="col-xs-12 col-sm-10" ng-view>
             </div>
             <!-- -------------------------- /SWITCHABLE CONTENT ------------------------- -->
 
@@ -193,31 +194,7 @@
         </div>
     </div>
 
-    <script>
-        var mainAngular = angular.module('mainApp', ['ngRoute', 'ngAnimate']);
 
-        mainAngular.config(function ($routeProvider, $locationProvider) {
-            $routeProvider
-                .when('/dashboard', {
-                    templateUrl: 'dashboard.html'
-                })
-                .when('/your_smarthome', {
-                    templateUrl: 'your_smarthome.html'
-                })
-                .when('/blackboard', {
-                    templateUrl: 'blackboard.html'
-                })
-                .when('/stats', {
-                    templateUrl: 'stats.html'
-                })
-                .otherwise({
-                    redirectTo: '/dashboard'
-                });
-
-            $locationProvider.hashPrefix('');
-
-        });
-    </script>
 
 </body>
 

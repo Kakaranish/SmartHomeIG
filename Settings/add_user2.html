@@ -31,37 +31,94 @@
     </div>
 </div>
 
+<style>
+
+    small{
+    color:red;
+    font-weight: 600;
+}
+</style>
 <form>
     <div class="form-group">
-        <label for="formGroupExampleInput">Example label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        <label>First Name</label>
+        <input type="text" class="form-control" id="first_name" placeholder="Your first name">
+        <small id="first_name_warning" style="display:none;">First Name field can't be empty!</small>
     </div>
 
     <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        <label>Last Name</label>
+        <input type="text" class="form-control" id="last_name" placeholder="Your last name">
+        <small id="last_name_warning" style="display:none;">Last Name field can't be empty!</small>
     </div>
 
     <div class="form-group">
-        <label for="example-date-input">Date</label>
-        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+        <label>Date of birth</label>
+        <input class="form-control" type="date" value="2011-08-19" id="date">
     </div>
 
     <div class="form-check form-check-inline">
         <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            Mężczyzna
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="option1">
+            Male
         </label>
     </div>
     <div class="form-check form-check-inline">
         <label class="form-check-label">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            Kobieta
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="option2">
+            Female
         </label>
     </div>
+    <br>
+    <small id="gender_warning" style="display:none;">Select gender!</small>
 
-    <a href="#settings/add_user2" class="btn btn-block btn-outline-info btn-fluid" style="margin-top:30px;">Upload photo</a>
+    <a href="#settings/add_user2" class="btn btn-block btn-outline-info btn-fluid" style="margin-top:30px;">
+        Upload photo
+    </a>
 
-    <a href="#settings/give_privileges" class="btn btn-block btn-primary btn-fluid" style="margin-top:30px;">Next step</a>
+    <!-- a href="#settings/give_privileges" -->
+    <button id="next-step-button" class="btn btn-block btn-primary btn-fluid" style="margin-top:30px;">Next step</a>
 
 </form>
+
+<script>
+    $(function () {
+        $("#next-step-button").on('click', function () {
+
+            var finished = true;
+            if ($("#first_name").val() == '') {
+                $("#first_name_warning").show();
+                finished = false;
+            } else {
+                $("#first_name_warning").hide();
+            }
+
+            if ($("#last_name").val() == '') {
+                $("#last_name_warning").show();
+                finished = false;
+            } else {
+                $("#last_name_warning").hide();
+            }
+
+            if ($("#first_name").val() == '') {
+                $("#first_name_warning").show();
+                finished = false;
+            } else {
+                $("#first_name_warning").hide();
+            }
+
+            if ($("#male").prop('checked') == false && $("#female").prop('checked') == false) {
+                $("#gender_warning").show();
+                finished = false;
+            } else {
+                $("#gender_warning").hide();
+            }
+
+            if (finished) {
+                var loc = window.location.href; // returns the full URL
+                loc = loc.substr(0, loc.lastIndexOf('/') - 1);
+                window.location.replace( '#settings/give_privileges');
+            }
+
+        });
+    });
+</script>
